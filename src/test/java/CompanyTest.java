@@ -1,6 +1,6 @@
 import org.example.Company;
 import org.example.Employee;
-import org.example.Healthplan;
+import org.example.HealthPlan;
 import org.example.enums.Plan;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -17,13 +17,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ExtendWith(ResultAnalyzer.class)
 public class CompanyTest {
 
-    private Healthplan healthplan;
+    private HealthPlan healthplan;
     private Employee employee;
     private Company company;
 
     @BeforeEach
     void setUp() {
-        healthplan = new Healthplan(1, "A Sigorta", Plan.BASIC);
+        healthplan = new HealthPlan(1, "A Sigorta", Plan.BASIC);
         String[] healthplans = new String[2];
         healthplans[0] = healthplan.getName();
         employee = new Employee(1, "John Doe", "jd@test.com", "1234", healthplans);
